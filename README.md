@@ -1,1 +1,1 @@
-This repository is for the GitHub Action course.
+# This repository is for the GitHub Action course.
