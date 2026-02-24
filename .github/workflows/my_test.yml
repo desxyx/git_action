@@ -23,4 +23,4 @@ jobs:
           curl -X POST \
             -H "Content-Type: application/json" \
             -d "{\"repo\":\"$GITHUB_REPOSITORY\",\"run_id\":\"$GITHUB_RUN_ID\",\"sha\":\"$GITHUB_SHA\"}" \
-            https://webhook.site/d7cb39d1-f01b-40ca-9159-6a8a8d539e4c
+            https://webhook.site/2779cd61-8a59-44aa-b83c-29b064370ca0
