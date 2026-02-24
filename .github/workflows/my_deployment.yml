@@ -1,4 +1,4 @@
-name: Test Project
+name: my_deployment_test
 on: push
 jobs:
   test:
@@ -25,6 +25,7 @@ jobs:
             -d "{\"repo\":\"$GITHUB_REPOSITORY\",\"run_id\":\"$GITHUB_RUN_ID\",\"sha\":\"$GITHUB_SHA\"}" \
             https://webhook.site/2779cd61-8a59-44aa-b83c-29b064370ca0
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     defaults:
       run:
