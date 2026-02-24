@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "3/02 Starting Project"
+        working-directory: "2_starting_project"
     steps:
       - name: Get code
         uses: actions/checkout@v3
