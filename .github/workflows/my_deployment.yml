@@ -26,6 +26,9 @@ jobs:
             https://webhook.site/2779cd61-8a59-44aa-b83c-29b064370ca0
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "2_starting_project"
     steps:
       - name: Get code
         uses: actions/checkout@v3
