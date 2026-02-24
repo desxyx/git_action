@@ -24,3 +24,18 @@ jobs:
             -H "Content-Type: application/json" \
             -d "{\"repo\":\"$GITHUB_REPOSITORY\",\"run_id\":\"$GITHUB_RUN_ID\",\"sha\":\"$GITHUB_SHA\"}" \
             https://webhook.site/2779cd61-8a59-44aa-b83c-29b064370ca0
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Deploy
+        run: echo "Deploying******"
