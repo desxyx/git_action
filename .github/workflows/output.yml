@@ -5,7 +5,8 @@ jobs:
     info:
         runs-on: ubuntu-latest
         steps:
-            - name: Output Github Context
-              run: |
-                echo 'Please check following information:'
-                echo '${{ toJson(github)}}'
+        - name: Print key info
+          run: |
+            echo "Branch: ${{ github.ref }}"
+            echo "Actor: ${{ github.actor }}"
+            echo "Commit: ${{ github.sha }}"
