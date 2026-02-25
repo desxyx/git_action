@@ -1,4 +1,4 @@
-name: my_practive
+name: my_practice
 on: workflow_dispatch
 
 defaults:
