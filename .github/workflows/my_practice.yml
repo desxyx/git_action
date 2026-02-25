@@ -1,0 +1,21 @@
+name: my_practive
+on: push
+jobs:
+    lintAllTheThings:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: "4_practice_project"
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            
+            - name: Install deps
+              run: npm ci
+            
+            - name: ESlint
+              run: npm run lint
