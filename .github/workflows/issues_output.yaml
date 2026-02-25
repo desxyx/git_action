@@ -1,0 +1,17 @@
+name: Issue Event Details
+on: 
+    issues:
+        types: [opened, edited, assigned]
+jobs:
+    output-details:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Output Issue Title
+              run: |
+                echo " Issue Title: ${{github.event.issue.title}}"
+            - name: Output Issue Body
+              run: |
+                echo " Issue Title: ${{github.event.issue.body}}"
+            - name: Output Issue Payload
+              run: |
+                echo " Issue Title: ${{toJson(github.event)}}"
